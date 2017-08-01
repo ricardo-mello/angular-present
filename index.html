@@ -65,7 +65,7 @@
             <h2>Overview</h2>
             <ol>
                 <li>Open Source</li>
-                <li>Typescript</li>
+                <li>TypeScript</li>
                 <li>Think Async</li>
                 <li>Angular</li>
                 <li>Demo</li>
@@ -73,7 +73,98 @@
         </section>
 
         <section data-background="img/built-for-developers.png">
-            
+        </section>
+
+        <section>
+            <h1>TypeScript</h2>
+        </section>
+
+        <section>
+            <pre><code class="typescript">
+//For the latest specifications:
+//https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md
+
+class Startup {
+    public static main(): number {
+        console.log('Hello World');
+        return 0;
+    }
+}
+
+Startup.main();
+
+</code></pre>
+        </section>
+
+        <section style="text-align:left">
+            <h3>O que há de ruim no JavaScript?</h3>
+            <br>
+            <ul>
+                <li>Tipagem Dinâmica</li>
+                <li>Falta de modularidade</li>
+                <li>Padrões verbosos (IIFE)</li>
+                <li class="fragment"><strong>Resumindo: Não escala muito bem</strong></li>
+            </ul>
+        </section>
+
+        <section style="text-align:left">
+            <h3>O que há de bom no JavaScript?</h2>
+            <br>
+            <ul>
+                <li>Está em todo lugar</li>
+                <li>Uma quantidade enorme de bibliotecas</li>
+                <li>Flexibilidade</li>
+            </ul>
+        </section>
+
+        <section style="text-align:left">
+            <h2>TypeScript</h2>
+            <ul>
+                <li>Superset do JavaScript <span class="fragment">(O JS está lá dentro!)</span></li>
+                <li>Tipagem opcional <span class="fragment">(mas use!)</span></li>
+                <li>Compila para ES*</li>
+            </ul>
+            <p class="fragment">* a p**** toda </p>
+        </section>
+
+        <section>
+            <h3>Interfaces</h3>
+            <pre><code class="typescript">
+interface MyInterface {
+    (param: number): string;
+
+    member: number;
+    optionalmember?: number;
+
+    myMethod(param: string): void;
+}
+
+var instance: MyInterface = instance(1);
+</code></pre>
+        </section>
+
+        <section>
+            <h3>Interfaces</h3>
+            <p>Use para representar resultados de chamadas REST</p>
+            <pre><code class="typescript">
+$.getJSON('hotel/123').then((hotel: Hotel) => {
+    openReservation(hotel.details);
+});
+
+</code></pre>
+        </section>
+
+        <section>
+            <h3>Enums</h3>
+            <pre><code class="typescript">
+enum Language { TypeScript, DotNet, Java, PHP, JavaScript }
+
+</code></pre>
+        </section>
+
+        <section>
+            <img src="img/copypaste-everywhere.jpg">
+            <h5>- C# sobre TypeScript</h3>
         </section>
 
     </div>
